@@ -58,7 +58,7 @@ OPENSEA_URL = "https://opensea.io/collection/loufis-art"
 TIMEZONE = "Europe/Brussels"
 
 # Dossier d'images
-IMAGES_DIR = "./assets/posts"
+IMAGES_DIR = "."
 ALLOWED_EXTS = {".jpg", ".jpeg", ".png"}
 IMAGE_RECENCY_DAYS = 14
 
