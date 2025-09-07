@@ -1,0 +1,21 @@
+# .github/workflows/masto-bot.yml
+name: mastodon-bot
+on:
+  schedule:
+    - cron: "8 7,12,18,20 * * *"   # UTC → adapte selon Europe/Brussels
+  workflow_dispatch: {}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install Mastodon.py
+      - name: Run oneshot
+        env:
+          MASTODON_BASE_URL: ${{ secrets.MASTODON_BASE_URL }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+        run: python mastodon_bot_safe.py --oneshot
