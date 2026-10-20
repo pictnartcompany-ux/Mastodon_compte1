@@ -1,4 +1,4 @@
-# .github/workflows/masto-bot.yml
+# .github/workflows/masto-bot.yml change
 name: mastodon-bot
 on:
   schedule:
