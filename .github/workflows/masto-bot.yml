@@ -1,4 +1,4 @@
-# .github/workflows/masto-bot.yml
+ # .github/workflows/masto-bot.yml
 name: mastodon-bot
 on:
   schedule:
